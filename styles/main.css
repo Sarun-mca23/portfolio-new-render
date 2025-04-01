@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+
+body{
+    height:100vh ;
+    background-color: #000;
+    background-image: url('../source/foliobg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color:rgb(11, 238, 238);
+}
+/************************
+HEADER
+*************************/
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: rgb(23, 175, 175);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+/************************
+DROUPDOWN MENU
+************************/
+.dropdown_menu{
+    display: none;
+    position:absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/************************
+ HERO
+************************/
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+ 
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+span{
+    color: rgb(23, 175, 175);
+}
+
+
+/************************
+ABOUT ME
+************************/
+
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#000,#000);
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    font-size: 70px;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+.near-2{
+    color: #03dac4;
+}
+.container{
+    margin-left: 32%;
+   margin-bottom: 30px;
+}
+#sarun{
+    width: 230px;
+    height: 290px;
+    margin-left: 100px;
+}
+.about img{
+	height: auto;
+	width: 430px;
+}
+.about-text{
+	width: 550px;
+}
+.main{
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+    margin-bottom: 50%;
+}
+.about-text h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	
+}
+.about-text h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.about-text p{
+	color: #fcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+.resume ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.resume ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.resume ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #03dac4;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.resume ul li:hover::after{
+    width: 100%;
+}
+
+/************************
+PROJECTTS
+************************/
+
+ .project-title{
+	color: white;
+	font-size: 65px;
+	width: 1130px;
+	margin: 30px auto;
+	text-align: center;
+}
+.title2{
+    color: #03dac4;
+}
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+.card{
+	height: 365px;
+	width: 300px;
+	padding: 20px 20px;
+	background: #191919;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.card i{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: #03dac4;
+
+}
+h5{
+	color: #fcfc;
+	font-size: 23px;
+	margin-bottom: 15px;
+}
+.pra p{
+	color: #fff;
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 25px;
+}
+.card .button, .button2{
+	background-color:#03dac4;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 9px 22px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+.card .button, .button2:hover{
+	background-color: transparent;
+	border: 2px solid #03dac4;
+	cursor: pointer;
+}
+
+/************************
+SKILLS
+************************/
+
+.skillset{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.title {
+    font-size: 64px;
+    margin-bottom: 90px;
+}
+
+.skills-container {
+    text-align: center;
+}
+
+.skill {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.skill-name {
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background-color: #1b1b1b;
+    height: 20px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: scaleIn 1s ease-out;
+    animation-fill-mode: forwards;
+    margin-left: 2em;
+}
+
+.skill-level {
+    height: 100%;
+    width: 0;
+    background-color: #03dac4;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Animation on hover */
+.skill-bar:hover .skill-level {
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/************************
+CONTACT
+************************/
+
+
+.contact-me {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #827f7f;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    grid-gap: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-top: 0.5em;
+}
+
+button {
+    background-color: #03dac4;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/***********************
+FOOTER
+***********************/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons {
+    margin-top: 1em;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/************************
+ RESPONSIVE DESIGN
+************************/
+
+@media(max-width: 992px){
+    .navbar .links, .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
